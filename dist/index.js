@@ -58,22 +58,19 @@ const propertiesReader = __webpack_require__(114);
 
 const run = async () => {
   try {
-    const file = core.getInput('path');
+    const file = core.getInput('file');
     const properties = propertiesReader(file);
 
-    let values = [];
+    let value = '';
     const readFrom = core.getInput('read-from');
     if (readFrom) {
-      values = readFrom
-        .trim()
-        .split(/\s+/)
-        .reduce((props, field) => {
-          props.push(properties.get(field));
-          return props;
-        }, []);
+      value = properties.get(readFrom);
     }
 
-    core.setOutput('values', values);
+    // TODO
+    // handle write-to
+
+    core.setOutput('value', value);
   } catch (error) {
     core.setFailed(error.message);
   }

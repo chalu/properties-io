@@ -9,7 +9,7 @@ This action sends the lighthouse assertion summary to our backend API
 
 ### `read-from`
 
-A space separated list of fields to read from
+The field to read from
 
 ### `write-to`
 
@@ -17,8 +17,8 @@ A space separated list of field=value pairs to write to
 
 ## Outputs
 
-### `values`
-An array of values read from fields specified with `read-from`, in the order they were specified. Available only when fields were read in with `read-from`.
+### `value`
+The value read from the field specified with `read-from`.
 
 ## Example Usage
 
