@@ -6,13 +6,13 @@ inputs:
     required: true
     default: './app.properties'
   read-from:
-    description: 'a space separated list of fields to read from'
+    description: 'the field to read from'
   write-to:
     description: 'a space separated list of field=value pairs to write to'
 
 outputs:
-  values: 
-    description: 'an array of values read from fields specified with read-from'
+  value: 
+    description: 'the value read from the field specified with read-from'
 runs:
   using: 'node12'
   main: 'dist/index.js'
