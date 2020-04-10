@@ -28,8 +28,8 @@ The value read from the field specified with `read-from`.
   uses: chalu/properties-io@v1
   with:
     file: ./prefs.properties
-    read-from: language color size
+    read-from: language
 - name: Do something with the properties
-  run: echo ${{ steps.props.outputs.values[0] }}
+  run: echo ${{ steps.props.outputs.value }}
 ```
 
