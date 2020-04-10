@@ -1,13 +1,18 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Properties IO'
+description: 'read from, and write to **.properties file'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  file:
+    description: 'the .properties file to work with'
     required: true
-    default: '1000'
+    default: './app.properties'
+  read-from:
+    description: 'a space separated list of fields to read from'
+  write-to:
+    description: 'a space separated list of field=value pairs to write to'
+
 outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  values: 
+    description: 'an array of values read from fields specified with read-from'
 runs:
   using: 'node12'
   main: 'dist/index.js'
