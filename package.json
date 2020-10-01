@@ -25,7 +25,7 @@
     "package": "ncc build index.js -m -o dist"
   },
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "properties-reader": "^1.0.0"
   },
   "devDependencies": {
